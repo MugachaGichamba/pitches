@@ -4,12 +4,17 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-
 app.config['SECRET_KEY'] = 'f04d4ad95aa5cb663854acb929d69a01'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+db = SQLAlchemy(app)
 
 
-db = SQLAlchemy(app);
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    image_file = db.Column(db.String(20), nullable=False, default='default.png')
+    password = db.Column(db.String(60), nullable=False)
 
 pitches = [
     {
