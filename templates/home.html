@@ -6,5 +6,16 @@
 </head>
 <body>
 <h1>Welcome Home</h1>
+{% for pitch in pitches %}
+    <h2>{{ pitch.author }}</h2>
+    <h5>{{ pitch.date_posted }}</h5>
+    <p>{{ pitch.category }}</p>
+    <p>{{ pitch.pitch }}</p>
+    <p>{{ pitch.likes }}</p>
+    <p>{{ pitch.dislikes }}</p>
+    {% for comment in pitch.comments %}
+        <p>{{ comment }}</p>
+    {% endfor %}
+{% endfor %}
 </body>
 </html>

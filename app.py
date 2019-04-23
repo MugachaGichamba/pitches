@@ -10,7 +10,17 @@ pitches = [
         "likes": 3,
         "dislikes": 0,
         "comments": ["fiti", "kijana round"],
-        "date posted": "April 23rd 2019"
+        "date_posted": "April 23rd 2019"
+
+    },
+{
+        'author': 'Nicollo Machiavelli',
+        'category': "quotes",
+        'pitch': "In my view",
+        "likes": 5,
+        "dislikes": 4,
+        "comments": ["fiti", "kijana round"],
+        "date_posted": "April 23rd 2019"
 
     }
 ]
@@ -19,7 +29,7 @@ pitches = [
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', pitches=pitches)
 
 
 @app.route('/about')
