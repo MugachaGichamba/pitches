@@ -29,7 +29,7 @@ pitches = [
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', pitches=pitches)
+    return render_template('home.html', pitches=pitches, title="Home")
 
 
 @app.route('/about')

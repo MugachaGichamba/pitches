@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-<h1>Welcome Home</h1>
+
+{% extends 'layout.html' %}
+{% block content %}
 {% for pitch in pitches %}
     <h2>{{ pitch.author }}</h2>
     <h5>{{ pitch.date_posted }}</h5>
@@ -17,5 +12,4 @@
         <p>{{ comment }}</p>
     {% endfor %}
 {% endfor %}
-</body>
-</html>
+{% endblock content %}
