@@ -1,9 +1,15 @@
 from flask import Flask, render_template, url_for, flash, redirect
 from forms import RegistrationForm, LoginForm
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'f04d4ad95aa5cb663854acb929d69a01'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+
+
+db = SQLAlchemy(app);
 
 pitches = [
     {
