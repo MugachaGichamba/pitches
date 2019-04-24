@@ -1,5 +1,5 @@
 from flask import render_template, url_for, flash, redirect, request
-from piches.forms import RegistrationForm, LoginForm
+from piches.forms import RegistrationForm, LoginForm, PitchForm
 from piches.models import User, Pitch
 from piches import app, db, bcrypt
 from flask_login import login_user, logout_user, current_user, login_required
@@ -79,3 +79,25 @@ def logout():
 @login_required
 def profile():
     return render_template('profile.html', title="profile")
+
+
+@app.route('/pitch/new', methods=['GET', 'POST'])
+@login_required
+def new_pitch():
+    form = PitchForm()
+    if form.validate_on_submit():
+        flash('Your pitch has been created', 'success')
+        return redirect(url_for('home'))
+    return render_template('new_pitch.html', title="New Pitch", form=form)
+
+
+
+
+
+
+
+
+
+
+
+
