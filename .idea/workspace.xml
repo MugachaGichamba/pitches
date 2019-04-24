@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6f74cdf-63ae-4120-8eec-ff644db66e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/piches/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/piches/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/piches/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/piches/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/piches/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/piches/routes.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/piches/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -37,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/piches/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-131">
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -45,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piches/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="92">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -57,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -69,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/piches/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="268">
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
@@ -106,15 +98,15 @@
         <option value="$PROJECT_DIR$/models.py" />
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/piches/routes.py" />
         <option value="$PROJECT_DIR$/piches/__init__.py" />
+        <option value="$PROJECT_DIR$/piches/routes.py" />
         <option value="$PROJECT_DIR$/piches/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="25" />
-    <option name="width" value="1366" />
+    <option name="width" value="683" />
     <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -224,7 +216,7 @@
       <updated>1555999414464</updated>
       <workItem from="1555999415974" duration="5031000" />
       <workItem from="1556005473278" duration="12735000" />
-      <workItem from="1556087782217" duration="1748000" />
+      <workItem from="1556087782217" duration="6494000" />
     </task>
     <task id="LOCAL-00001" summary="rendered the home template from home route">
       <created>1556002237902</created>
@@ -352,22 +344,36 @@
       <option name="project" value="LOCAL" />
       <updated>1556088525523</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="changed to the correct folder structure">
+      <created>1556089570953</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1556089570954</updated>
+    </task>
+    <task id="LOCAL-00020" summary="imported and initialised bcrypt">
+      <created>1556093285554</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1556093285554</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19514000" />
+    <option name="totallyTimeSpent" value="24260000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <frame x="683" y="25" width="683" height="743" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13712122" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28414443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3267974" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46905538" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -376,7 +382,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3306189" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3403909" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -385,12 +391,12 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.42072213" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28414443" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32736155" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46905538" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -399,7 +405,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3306189" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3403909" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -430,11 +436,13 @@
     <MESSAGE value="Added User model class" />
     <MESSAGE value="added pitch model class and added a user foreign key" />
     <MESSAGE value="moved models from main to separate file" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved models from main to separate file" />
+    <MESSAGE value="changed to the correct folder structure" />
+    <MESSAGE value="imported and initialised bcrypt" />
+    <option name="LAST_COMMIT_MESSAGE" value="imported and initialised bcrypt" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Piches$Piches.coverage" NAME="Piches Coverage Results" MODIFIED="1556001751285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Piches$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1556088127643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Piches$Flask__app_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1556093818319" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -506,10 +514,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/piches/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+        <state relative-caret-position="268">
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
@@ -518,8 +533,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piches/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -528,7 +543,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piches/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="-131">
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -537,18 +552,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piches/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="92">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
