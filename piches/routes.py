@@ -74,5 +74,4 @@ def logout():
 
 @app.route('/profile')
 def profile():
-    logout_user()
-    return redirect(url_for('home'))
+    return render_template('profile.html', title="profile")
