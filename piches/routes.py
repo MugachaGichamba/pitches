@@ -54,11 +54,19 @@ def logout():
     return redirect(url_for('home'))
 
 
+
 @app.route('/profile')
 @login_required
 def profile():
     pitches = Pitch.query.filter_by(user_id=current_user.id).all()
     return render_template('profile.html', title="profile", pitches=pitches)
+
+
+@app.route('/categories')
+@login_required
+def categories():
+    pitches = Pitch.query.distinct().all()
+    return render_template('categories.html', title="categories", pitches=pitches)
 
 
 @app.route('/pitch/new', methods=['GET', 'POST'])
