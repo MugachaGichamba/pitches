@@ -1,8 +1,8 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect, request
 from piches.forms import RegistrationForm, LoginForm
 from piches.models import User, Pitch
 from piches import app, db, bcrypt
-from flask_login import login_user, logout_user, current_user
+from flask_login import login_user, logout_user, current_user, login_required
 
 pitches = [
     {
@@ -61,7 +61,9 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user)
-            return redirect(url_for('home'))
+            next_page = request.args.get('next')
+
+            return redirect(next_page) if next_page else redirect(url_for('home'))
         else:
             flash("Wrong login credentials", 'danger')
 
@@ -72,6 +74,8 @@ def logout():
     logout_user()
     return redirect(url_for('home'))
 
+
 @app.route('/profile')
+@login_required
 def profile():
     return render_template('profile.html', title="profile")
