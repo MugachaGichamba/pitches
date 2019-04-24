@@ -1,7 +1,8 @@
 from flask import render_template, url_for, flash, redirect
 from piches.forms import RegistrationForm, LoginForm
-from piches.models import User,Pitch
+from piches.models import User, Pitch
 from piches import app, db, bcrypt
+from flask_login import login_user, logout_user, current_user
 
 pitches = [
     {
@@ -35,31 +36,43 @@ def home():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        hashed_password = bcrypt.generate_password_hash(form.password.data)
-        print(hashed_password)
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         user = User(username=form.username.data,
                     email=form.email.data,
                     password=hashed_password)
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created', 'success')
-        return redirect(url_for('home'))
+        return redirect(url_for('login'))
 
     return render_template('register.html', title="Register", form=form)
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = LoginForm()
     if form.validate_on_submit():
-        if form.email.data == "admin@gmail.com" and form.password.data == "pass":
-            flash("you have been logged in", 'success')
+        user = User.query.filter_by(email=form.email.data).first()
+        if user and bcrypt.check_password_hash(user.password, form.password.data):
+            login_user(user)
             return redirect(url_for('home'))
-
         else:
-            flash("invalid credentials", 'danger')
+            flash("Wrong login credentials", 'danger')
 
     return render_template('login.html', title="Login", form=form)
 
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
+
+@app.route('/profile')
+def profile():
+    logout_user()
+    return redirect(url_for('home'))
