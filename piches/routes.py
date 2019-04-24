@@ -4,33 +4,11 @@ from piches.models import User, Pitch
 from piches import app, db, bcrypt
 from flask_login import login_user, logout_user, current_user, login_required
 
-pitches = [
-    {
-        'author': 'Mugacha Gichamba',
-        'category': "wordplay",
-        'pitch': "mkinunua loaf haiko sliced lazima mkate",
-        "likes": 3,
-        "dislikes": 0,
-        "comments": ["fiti", "kijana round"],
-        "date_posted": "April 23rd 2019"
-
-    },
-    {
-        'author': 'Nicollo Machiavelli',
-        'category': "quotes",
-        'pitch': "In my view",
-        "likes": 5,
-        "dislikes": 4,
-        "comments": ["fiti", "kijana round"],
-        "date_posted": "April 23rd 2019"
-
-    }
-]
-
 
 @app.route('/')
 @app.route('/home')
 def home():
+    pitches = Pitch.query.all()
     return render_template('home.html', pitches=pitches, title="Home")
 
 
@@ -69,6 +47,7 @@ def login():
 
     return render_template('login.html', title="Login", form=form)
 
+
 @app.route('/logout')
 def logout():
     logout_user()
@@ -78,7 +57,8 @@ def logout():
 @app.route('/profile')
 @login_required
 def profile():
-    return render_template('profile.html', title="profile")
+    pitches = Pitch.query.filter_by(user_id=current_user.id).all()
+    return render_template('profile.html', title="profile", pitches=pitches)
 
 
 @app.route('/pitch/new', methods=['GET', 'POST'])
@@ -86,18 +66,11 @@ def profile():
 def new_pitch():
     form = PitchForm()
     if form.validate_on_submit():
+        pitch = Pitch(category=form.category.data, pitch=form.pitch.data,
+                      author=current_user)
+
+        db.session.add(pitch)
+        db.session.commit()
         flash('Your pitch has been created', 'success')
         return redirect(url_for('home'))
     return render_template('new_pitch.html', title="New Pitch", form=form)
-
-
-
-
-
-
-
-
-
-
-
-
