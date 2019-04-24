@@ -24,7 +24,8 @@ def register():
                     password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        flash('Your account has been created', 'success')
+        send_email(form.email.data)
+        flash('Your account has been created, please check your email!', 'success')
         return redirect(url_for('login'))
 
     return render_template('register.html', title="Register", form=form)
@@ -54,6 +55,8 @@ def logout():
     return redirect(url_for('home'))
 
 
+def send_email(email):
+    pass
 
 @app.route('/profile')
 @login_required
