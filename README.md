@@ -27,4 +27,4 @@ As a user I will be able to:
 #### Phone: 0705684752
 #### Email: mugachadjango@gmail.com
 ## License
-#### This project is licensed under the MIT License - see the LICENSE.md file for details
+#### This project is licensed under the MIT License 
