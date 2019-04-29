@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6f74cdf-63ae-4120-8eec-ff644db66e23" name="Default Changelist" comment="" />
+    <list default="true" id="b6f74cdf-63ae-4120-8eec-ff644db66e23" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piches/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="99" column="96" selection-start-line="99" selection-start-column="96" selection-end-line="99" selection-end-column="96" />
+            <state relative-caret-position="188">
+              <caret line="95" column="31" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="31" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
@@ -153,11 +155,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="596" />
-    <option name="y" value="126" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="25" />
     <option name="width" value="683" />
-    <option name="height" value="555" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -273,7 +274,7 @@
       <workItem from="1555999415974" duration="5031000" />
       <workItem from="1556005473278" duration="12735000" />
       <workItem from="1556087782217" duration="27322000" />
-      <workItem from="1556535285138" duration="4035000" />
+      <workItem from="1556535285138" duration="4783000" />
     </task>
     <task id="LOCAL-00001" summary="rendered the home template from home route">
       <created>1556002237902</created>
@@ -461,12 +462,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49123000" />
+    <option name="totallyTimeSpent" value="49871000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="535" y="148" width="683" height="555" extended-state="0" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3579278" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17272727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -480,7 +482,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50078493" side_tool="true" weight="0.3403909" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49921507" visible="true" weight="0.49061033" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49921507" visible="true" weight="0.3403909" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -628,8 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piches/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="99" column="96" selection-start-line="99" selection-start-column="96" selection-end-line="99" selection-end-column="96" />
+        <state relative-caret-position="188">
+          <caret line="95" column="31" selection-start-line="95" selection-start-column="30" selection-end-line="95" selection-end-column="31" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>
