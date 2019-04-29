@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
-from piches.forms import RegistrationForm, LoginForm, PitchForm
-from piches.models import User, Pitch
+from piches.forms import RegistrationForm, LoginForm, PitchForm, CommentForm
+from piches.models import User, Pitch, Comment
 from piches import app, db, bcrypt
 from flask_login import login_user, logout_user, current_user, login_required
 
@@ -82,3 +82,19 @@ def new_pitch():
         flash('Your pitch has been created', 'success')
         return redirect(url_for('home'))
     return render_template('new_pitch.html', title="New Pitch", form=form)
+
+
+@app.route('/comment/<int:pitch_id>', methods=['GET', 'POST'])
+@login_required
+def new_comment(pitch_id):
+    comments = Comment.query.filter_by(pitch_id=pitch_id)
+    form = CommentForm()
+    if form.validate_on_submit():
+
+        comment = Comment(comment=form.comment.data, pitch_id=pitch_id)
+
+        db.session.add(comment)
+        db.session.commit()
+        flash('Your comment has been added', 'success')
+        return redirect(url_for('home'))
+    return render_template('new_comment.html', title="New Comment", form=form, comments=comments)
